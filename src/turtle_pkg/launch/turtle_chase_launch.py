@@ -17,3 +17,4 @@ def generate_launch_description():
     
     ld.add_action(turtle_environment_node)
     ld.add_action(turtle_game_node)
+    return ld

@@ -26,9 +26,7 @@ class turtle_chase(Node):
        self.killclient = self.create_client(Kill,'kill')
 
        self.playerSub = self.create_subscription(Pose , 'turtle1/pose' , self.player_callback ,10)
-      # self.enemysub = self.create_subscription(Pose , 'enemy1/pose' , self.enemy1_callback , 10)
-      # self.enemy1sub = self.create_subscription(Pose , 'enemy2/pose' , self.enemy2_callback , 10)
-      # self.enemy1sub = self.create_subscription(Pose , 'enemy3/pose' , self.enemy3_callback , 10)
+      
        
        self.enemyspawn('enemy1')
        self.enemyspawn('enemy2')
@@ -97,11 +95,4 @@ class turtle_chase(Node):
                     self.enemykill(name)
                     self.enemyspawn(name)
         else : raise Exception("ERROR")
-
-
-                
-                
-            
-    
-            
     
